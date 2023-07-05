@@ -230,7 +230,7 @@ class google_translator:
                     # regex_str = r"\[\[\"wrb.fr\",\"MkEWBc\",\"\[\[(.*).*?,\[\[\["
                     try:
                         # data_got = re.search(regex_str,decoded_line).group(1)
-                        response = decoded_line
+                        response = (decoded_line + ']')
                         response = json.loads(response)
                         response = list(response)
                         response = json.loads(response[0][2])
